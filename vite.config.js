@@ -8,5 +8,5 @@ export default defineConfig({
     vue(),
     tailwindcss(), // <-- 2. 將外掛加入陣列中
   ],
-  base: 'https://harrydulia.github.io/harry.resume.github.io/' // <-- 3. 設定 base 路徑
+  base: 'harry.resume.github.io/'
 })
