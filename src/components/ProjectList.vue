@@ -67,7 +67,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -143,4 +142,5 @@ const prevSlide = (index) => {
   const meta = projectMeta.value[index];
   meta.currentIndex = (meta.currentIndex - 1 + meta.images.length) % meta.images.length;
 };
+
 </script>

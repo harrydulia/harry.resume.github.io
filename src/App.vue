@@ -11,6 +11,7 @@
         <ResumeBlock />
         <SkillsBlock />
         <ProjectList />
+        <Thesis />
 
       </div>
     </main>
@@ -28,6 +29,7 @@ import HighlightBlock from './components/HighlightBlock.vue';
 import ResumeBlock from './components/ResumeBlock.vue';
 import SkillsBlock from './components/SkillsBlock.vue';
 import ProjectList from './components/ProjectList.vue';
+import Thesis from './components/Thesis.vue';
 import FooterBlock from './components/FooterBlock.vue';
 </script>
 

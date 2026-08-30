@@ -1,5 +1,6 @@
 <template>
-  <div class="md:col-span-2 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-[2rem] p-8 text-white shadow-lg flex flex-col justify-center relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/40 transition-all duration-500">
+
+  <div v-if="showHighlight" class="md:col-span-2 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-[2rem] p-8 text-white shadow-lg flex flex-col justify-center relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/40 transition-all duration-500">
     <div class="absolute -right-10 -top-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl group-hover:scale-110 transition-transform"></div>
     
     <span class="text-xs font-bold uppercase tracking-widest text-blue-200 mb-2">
@@ -16,5 +17,5 @@
 </template>
 
 <script setup>
-import { currentLang, dict } from '../i18n.js';
+import { currentLang, dict, showHighlight } from '../i18n.js';
 </script>

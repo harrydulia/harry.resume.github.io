@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 export const currentLang = ref('zh');
-
+export const showHighlight = ref(false); // 控制 HighlightBlock 顯示與否與區塊配置
 export const toggleLang = () => {
   currentLang.value = currentLang.value === 'zh' ? 'en' : 'zh';
 };
@@ -14,6 +14,7 @@ export const dict = {
       resume: '學經歷', 
       skills: '技能', 
       projects: '作品',
+      thesis: '論文',
       btnText: 'EN'
     },
     about: {
@@ -34,7 +35,7 @@ export const dict = {
       certTitle: '證照',
       expTitle: '經歷',
       education: [
-        { title: '國立臺北商業大學', org: '人工智慧與商業應用研究所', date: '2023 - 現在' },
+        { title: '國立臺北商業大學', org: '人工智慧與商業應用研究所', date: '2023.9 - 2024.6,2025.5 - 2026.8' },
         { title: '國立臺北商業大學', org: '資訊管理系', date: '2021 - 2023' }
       ],
     certs: [
@@ -53,6 +54,7 @@ export const dict = {
     }
     ],
       experience: [
+        { title: '第24屆國際作業研究學會聯合會會議(IFORS2026)', id: '發表者', date: '2026.7.12 - 2026.07.17' },
         { title: '國立臺北商業大學資管系', id: '國科會計畫研究生', date: '2025.12 - 2026.07' },
         { title: '資料庫管理', id: '課程助教', date: '2025.09 - 2026.07' },
         { title: 'IMP 資訊管理實務研討會', id: '工作人員', date: '2023.12.09' },
@@ -81,15 +83,28 @@ export const dict = {
           features: ['去紙本化系統管理', '統計課程與 TA 績效', '掌握課程運作情形', '自動產出證明 PDF']
         }
       ]
-    }
-
+    },
+    thesis: {
+      title: '學位論文',
+      info: {
+              advisor: '指導教授：李文毅 博士',
+              date: '口試日期：2026 年 06 月 23 日',
+              committee: '口試委員：謝宗翰 博士、葉英傑 博士、李文毅 博士',
+            },
+            paperTitle: '基於Omega隨機優勢的投資組合選擇',
+            entitle:'Omega-based Stochastic Dominance for Portfolio Selection',
+            abstract: '傳統二階隨機優勢模型(Second-order Stochastic Dominance, SSD) 通常要求投資組合在所有報酬率水準下，其累積分配函數(Cumulative Distribution Function, CDF)皆低於基準指標之CDF，以確保其符合風險趨避投資人的偏好。然而，此條件相對嚴格，容易使投資組合配置過於保守，進而限制投資人獲取潛在超額報酬的機會。為改善上述限制，研究提出一項以Omega Ratio為基礎之隨機優勢框架，導入Omega Ratio中的門檻值(Threshold)概念，將報酬分布明確區分為上檔潛力(Upside Potential) 與下檔風險 (Downside Risk)，透過此一設計，投資人得以在有效控管下檔風險的同時，保留並主動追求較高的上檔報酬機會。研究同時引入幾乎隨機優勢(Almost Stochastic Dominance, ASD)的概念，以放寬傳統SSD對所有報酬區間皆須完全滿足優勢條件的要求。透過允許模型在特定範圍內存在有限程度的違反，幾乎隨機優勢能在維持風險趨避投資邏輯的同時，提升投資組合建構的彈性，避免因過度保守而犧牲潛在報酬機會。在計算方法上，研究採用切割平面演算法(Cutting Plane Algorithm)該方法能透過迭代方式辨識並加入關鍵限制式，避免一次性納入大量限制條件所造成的計算負擔，因而有效降低運算複雜度並提升求解效率。',
+            readMore: '點擊右側翻閱論文內容'
+          },
   },
+
   en: {
     nav: { 
       about: 'About', 
       resume: 'Resume', 
       skills: 'Skills', 
       projects: 'Projects',
+      thesis: 'Thesis',
       btnText: '中'
     },
     about: {
@@ -128,6 +143,7 @@ export const dict = {
     }
     ],
       experience: [
+        { title: 'The 24th Conference of the International Federation of Operational Research Societies(IFORS2026)', id: 'Presentation', date: '2026.7.12 - 2026.07.17' },
         { title: 'Dept. of IM, NTUB', id: 'NSTC Project Research Student', date: '2025.12 - 2026.07' },
         { title: 'Database Management', id: 'Teaching Assistant', date: '2025.09 - 2026.07' },
         { title: 'IMP Conference', id: 'Staff Member', date: '2023.12.09' },
@@ -156,6 +172,17 @@ export const dict = {
           features: ['Paperless Records Management', 'Performance Statistics', 'Real-time Course Monitoring', 'Auto-PDF Generation']
         }
       ]
-    }
+    },
+    thesis: {
+      title: 'Master Thesis',
+      info: {
+        advisor: 'Advisor: Dr. Lee, Wen-Yi',
+        date: 'Date: June 23, 2026',
+        committee: 'Committee: Dr. Hsieh, Chung-Han, Dr. Yeh, Ying-Chieh, Dr. Lee, Wen-Yi',
+      },
+      paperTitle: 'Omega-based Stochastic Dominance for Portfolio Selection',
+      abstract: 'Traditional Second-order Stochastic Dominance (SSD) models typically require the cumulative distribution function (CDF) of a portfolio to remain below that of a benchmark across all return levels to ensure alignment with the preferences of risk-averse investors. However, this relatively stringent condition often leads to overly conservative portfolio allocations, thereby limiting investors opportunities to capture potential excess returns.To address these limitations, this study proposes a stochastic dominance framework based on the Omega Ratio.By incorporating the threshold concept inherent in the Omega Ratio, the framework explicitly segregates the return distribution into upside potential and downside risk. This design enables investors to effectively manage downside risk while simultaneously retaining and actively pursuing greater upside return opportunities.Furthermore, this study introduces the concept of Almost Stochastic Dominance (ASD) to relax the strict traditional SSD requirement,which mandates complete fulfillment of dominance conditions across all return intervals.By permitting limited violations within specific ranges,ASD enhances the flexibility of portfolio construction while maintaining the underlying logic of risk aversion, thereby preventing the sacrifice of potential returns due to excessive conservatism.Methodologically,this study employs the Cutting Plane Algorithm.This approach iteratively identifies and incorporates critical constraints,avoiding the computational burden associated with introducing a massive number of constraints simultaneously.Consequently,it effectively reduces computational complexity and enhances solving efficiency.',
+      readMore: 'Click the book to flip pages'
+    },
   }
 };

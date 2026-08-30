@@ -11,6 +11,7 @@
         <a href="#resume" class="hover:text-blue-600 transition-colors">{{ dict[currentLang].nav.resume }}</a>
         <a href="#skills" class="hover:text-blue-600 transition-colors">{{ dict[currentLang].nav.skills }}</a>
         <a href="#projects" class="hover:text-blue-600 transition-colors">{{ dict[currentLang].nav.projects }}</a>
+        <a href="#thesis" class="hover:text-blue-600 transition-colors">{{ dict[currentLang].nav.thesis }}</a>
         
         <button @click="toggleLang" 
                 class="ml-2 px-3 py-1 bg-slate-100 hover:bg-blue-600 hover:text-white text-slate-700 rounded-full transition-all font-bold text-xs shadow-sm border border-slate-200">

@@ -17,7 +17,7 @@
       </p>
     </div>
     <div class="mt-8 flex flex-wrap gap-4 text-xs font-medium text-slate-500">
-      <span class="px-3 py-1 bg-slate-100 rounded-full">11036026@ntub.edu.tw</span>
+      <span class="px-3 py-1 bg-slate-100 rounded-full">11236026@ntub.edu.tw</span>
       <span class="px-3 py-1 bg-slate-100 rounded-full">Taipei, Taiwan</span>
     </div>
   </section>
