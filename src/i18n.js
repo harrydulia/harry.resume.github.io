@@ -125,7 +125,7 @@ export const dict = {
       certTitle: 'Certifications',
       expTitle: 'Experience',
       education: [
-        { title: 'National Taipei University of Business', org: 'M.S. in AI & Business Applications', date: '2023 - Present' },
+        { title: 'National Taipei University of Business', org: 'M.S. in AI & Business Applications', date: '2023.9 - 2024.6,2025.5 - 2026.8' },
         { title: 'National Taipei University of Business', org: 'B.B.A. in Information Management', date: '2021 - 2023' }
       ],
     certs: [
